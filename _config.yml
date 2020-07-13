@@ -20,7 +20,7 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    sal:
+    sandro:
       name:           Sandro
       site:           https://sandrofelder.ch
       avatar:         assets/images/me_avatar.png
