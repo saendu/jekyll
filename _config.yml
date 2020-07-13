@@ -23,7 +23,7 @@ authors:
     sal:
       name:           Sandro
       site:           https://sandrofelder.ch
-      avatar:         /assets/images/me_avatar.png
+      avatar:         assets/images/me_avatar.png
       bio:            "I am just a guy that cares."
       email:          sandro.felder@gmail.com
       twitter:        https://www.linkedin.com/in/sandrofelder/
