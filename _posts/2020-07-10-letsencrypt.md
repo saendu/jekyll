@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why you should not create stand alone certs with Let’s Encrypt"
-author: sal
+author: sandro
 categories: [ DEV ]
 image: assets/images/lets-encrypt.png
 ---
