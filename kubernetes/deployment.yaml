@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: jekyll
+  name: jekyll
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: jekyll
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: jekyll
+    spec:
+      containers:
+      - name: jekyll
+        image: blacktr/jekyll:arm1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 4000
+        args:
+        - jekyll
+        - serve
+        - --force_polling
+        volumeMounts:
+        - mountPath: /srv/jekyll
+          name: jekyll-volume
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes:
+        - name: jekyll-volume
+          persistentVolumeClaim:
+            claimName: jekyll-claim
