@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Could we reinvent the charm of old cities"
+title:  "Building your mini private cloud with K8s & RPi4"
 author: sandro
-categories: [ Jekyll, tutorial ]
-image: assets/images/home.jpg
+categories: [ DEV, Raspberry ]
+image: assets/images/raspberry4-cluster.jpg
 tags: [sticky]
 ---
 
-Bucharest’s history alternated periods of development and decline from the early settlements in antiquity until its consolidation as the national capital of Romania late in the 19th century. First mentioned as the “Citadel of București” in 1459, it became the residence of the famous Wallachian prince Vlad III the Impaler.
+Building your private clkubernetes cluster with some Raspberry Pie 4s and Kubernetes was my COVID-19 project. Now I want for the ones that care, share my learnings and help you to build your own.
 
 #### Early 18th century woodcut of Bucharest
 
