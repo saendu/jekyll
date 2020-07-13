@@ -1,6 +1,6 @@
 # Site
 name: 'Sandro Felder'
-description: 'A blog where nobody cares'
+description: 'Another blog where nobody cares'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 host: '0.0.0.0'
