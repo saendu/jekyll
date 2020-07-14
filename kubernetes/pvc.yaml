@@ -4,7 +4,7 @@ metadata:
   annotations:
     volume.beta.kubernetes.io/storage-class: "managed-nfs-storage"
   labels:
-    io.kompose.service: jekyll-claim
+    io.kompose.service: jekyll
   name: jekyll-claim
 spec:
   accessModes:
