@@ -2,7 +2,7 @@
 layout: post
 title:  "Building your mini private cloud with K8s & RPi4"
 author: sandro
-categories: [ DEV, Raspberry ]
+categories: [ DEV, Raspberry Pie ]
 image: assets/images/raspberry4-cluster.jpg
 tags: [sticky]
 ---
