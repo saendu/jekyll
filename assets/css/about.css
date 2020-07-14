@@ -2041,7 +2041,7 @@ button {
   flex: 0 0 auto
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1425px) {
   .button-2:hover {
       -webkit-transform:none;
       -ms-transform: none
