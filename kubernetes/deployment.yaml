@@ -19,7 +19,7 @@ spec:
       containers:
       - name: jekyll
         image: blacktr/jekyll:arm1
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 4000
         args:
