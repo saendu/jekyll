@@ -141,9 +141,7 @@ button {
 .w-slider {
   position: relative;
   height: 300px;
-  background: #ddd;
-  -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent
+  background-image: linear-gradient(-90deg, #f7f7f7, #ddd, #f7f7f7);
 }
 
 .w-slide,.w-slider-mask {
