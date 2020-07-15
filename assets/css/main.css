@@ -8472,3 +8472,16 @@ html {
     left: -4rem;
   }
 }
+
+div.author > img {
+  width: 120px;
+  margin-left: 0.7rem;
+}
+
+@media (min-width: 1150px) {
+  div.author > img {
+    margin-left: 1.5rem;
+  }
+}
+
+
