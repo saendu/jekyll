@@ -10,7 +10,7 @@ When Corona hit the fan and we all stuck in a lockdown, I've searched for new ho
 
 Currently there are six main projects running on my private cloud:
 - [Raspberry Pie Cluster](#raspberry-pie-cluster)
-- [Fuebiapp](#Fuebiapp)
+- [Fuebiapp](#fuebiapp)
 - [Microservices built with OAM / Dapr](#microservices-with-oam-and-dapr) 
 - [Private website (sandrofelder.ch)](#private-website)
 - [Mail Gateway](#mail-gateway)
