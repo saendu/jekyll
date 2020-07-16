@@ -5,7 +5,7 @@ logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 host: '0.0.0.0'
 baseurl: ''
-#disqus: 'sandrojekyll'
+disqus: 'sandrojekyll'
 email: 'sandrek@gmail.com'
 # mailchimp-list: ''
 
