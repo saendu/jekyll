@@ -6,9 +6,9 @@ categories: [ DEV ]
 image: assets/images/lets-encrypt.png
 ---
 
-> TL;TR Use certbot to create & renew the certs for you in the background. --A guy that cares, 2020
-
 Yeah you read right. You should not do that. Ant the reason is, because your address bar will look sooner or later like that:
+
+`` TL;TR Use certbot to create & renew the certs for you in the background. --A guy that cares, 2020 ``
 
 #### In the beginning there was a shortloved cert
 
