@@ -456,7 +456,7 @@ button {
 }
 
 .btn:hover {
-  background-color: #3fc697
+  background-color: #3fc697;
 }
 
 .btn.mayra-btn {
@@ -488,7 +488,7 @@ button {
 }
 
 .btn.mayra-btn:hover {
-  background-color: #00bfc5
+  background-color: #fff;
 }
 
 .btn.mayra-btn:hover {
