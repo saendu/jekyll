@@ -17,7 +17,7 @@ Currently there are six main projects running on my private cloud:
 
 ## Raspberry Pie Cluster
 ![Cluster]({{ site.baseurl }}/assets/images/rpi4-cluster.jpg)
-**Tech**: Raspberry Pie 4, Kubernetes, Ubuntu
+**Tech**: Raspberry Pie 4, Ubuntu, ARM64, Kubernetes, Docker, Nginx
 
 Obviously enough I needed something to let all my projects run. So a Raspberry would have been a good choice. But since buying just 'one' RPI was too easy, I instead bought four and build my own Raspberry Pie 4 Cluster. And what would be a cluster without an orchestrator. That is why I decided to create a Kubernetes Cluster with my Raspberries. 
 
