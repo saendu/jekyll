@@ -6,7 +6,7 @@ categories: [ Raspberry Pi ]
 image: assets/images/raspberry4-cluster.jpg
 tags: [sticky, featured]
 ---
-Hey! Also having some Raspberry Pi 4s lying around, and not really sure what you wanna do with them? And you want to learn something about **Ubuntu, Docker, Kubernetes** and get a taste of **ARM64**? Then building your own Raspberry Pi Kubernetes Cluster is o good starting point. Or at least, I've learned a lot about these technologies when building this. However I was sitting in a lock-down and had plenty of time to spend. So if you want to speed up a little bit and skip the hours debugging and fiddling around Github issue pages, then I recommend you to follow my guide here. 
+Hey! Also having some Raspberry Pi 4s lying around, and not really sure what you wanna do with them? And you want to learn something about **Ubuntu, Docker, Kubernetes** and get a taste of **ARM64**? Then building your own Raspberry Pi Kubernetes Cluster is o good starting point. Or at least, I've learned a lot about these technologies when building this. However, I was sitting in a lock-down and had plenty of time to spend. So, if you want to speed up a little bit and skip the hours debugging and fiddling around Github issue pages, then I recommend you to follow my guide here. 
 
 I tried to put everything you'll need into this article without you having to leave this page.  
 
@@ -14,7 +14,7 @@ I tried to put everything you'll need into this article without you having to le
 ### What we will build
 Our goal is to build a proper mini cloud. So that means is, you should be able to run various applications (servers) running behind a single or multiple URLs having proper load balancing (and autoscaling) and all of this cramped up in 10x8x6cm of space in your living room. 
 
-More percislely we will build a Kubernetes cluster with at least two (actually you would need three to have proper load balancing) Raspberry Pi 4s and a external hard drive for persistance storage.
+More precisely we will build a Kubernetes cluster with at least two (actually you would need three to have proper load balancing) Raspberry Pi 4s and an external hard drive for persistence storage.
 
 We are using the following components:
 
@@ -22,25 +22,25 @@ We are using the following components:
 - **Kubernetes** as our container orchestrator
 - **MetalLB** as load balancer to claim IP addresses from our router
 - **Nginx** as ingress controller to have multiple PODs sitting behind the same IP for convenience
-- An **NFS** server for persistance storage
+- An **NFS** server for persistent storage
 - **Grafana** to get some health metrics about our cluster
 
-> It will help if you have a basic understanding of those technologies. If not I think you should still be able to follow and learn on the way along. 
+> It will help if you have a basic understanding of those technologies. If not, I think you should still be able to follow and learn on the way along. 
 
 ### What hardware you will need
 1. At least two (actually three, or in my case four) Raspberry Pi 4
 2. An external SSD hard drive
-3. A switch or a router to plugin your RPIs
+3. A switch or a router to plug in your RPIs
 4. Some basic understanding about engineering and this article
 
 ### Basic Raspberry Pi installation
 Our Raspberry Pi's need a basic setup before we can start with the fun. For completeness sake I added this setup to this guide as well and not just be lazy and write 'setup Ubuntu 20.04', 'install docker', etc. Because with these little ARM64 guys some commands might be a bit different, especially when installing binaries. 
 
 #### Make your Raspberries ready
-If you bought a Raspberry Pi with a preinstalled Rasbian OS we first want to get rid of this an install Ubuntu 20.04. Reason is, I am not quite an expert with Raspbian and Ubuntu gives us plenty of useful features with some minor drawbacks in terms of performance. 
+If you bought a Raspberry Pi with a preinstalled Raspbian OS we first want to get rid of this an install Ubuntu 20.04. Reason is, I am not quite an expert with Raspbian, and Ubuntu gives us plenty of useful features with some minor drawbacks in terms of performance. 
 
 ##### Flash the RPIs
-So plug your Raspberry SD card to your Macbook or PC and do the following:
+So plug your Raspberry SD card to your MacBook or PC and do the following:
 1. Download the [Raspberry Imager](https://www.raspberrypi.org/downloads/) for your desired OS
 2. Open the Imager and click 'Choose OS' 
 3. Take Ubuntu 20.04
@@ -51,18 +51,18 @@ So plug your Raspberry SD card to your Macbook or PC and do the following:
 
 This can take a couple of minutes, read on and be prepared. 
 
-Afther the process is done, plug the SD cards back to the RPIs and plug them to your router or switch and give them some power. 
+After the process is done, plug the SD cards back to the RPIs and plug them to your router or switch and give them some power. 
 
 ##### Start with installation
 Afterwards login to your RPI (find the IP address in your router).
-It will probabbly ask you to change the password, so be a PRO and do that. 
+It will probably ask you to change the password, so be a PRO and do that. 
 
-In our Kuberenetes cluster you will have one master and several worker nodes. For simplicity we will call the master 'master' and the worker nodes 'nodes'. So in my case I have one master and three worker nodes. 
+In our Kubernetes cluster you will have one master and several worker nodes. For simplicity we will call the master 'master' and the worker nodes 'nodes'. So, in my case I have one master and three worker nodes. 
 
 The next steps is the basic setup and we will do that on ALL RPIs. 
 #### Basic setup
-Rename the nodes accorind to your naming concept:
-Add your deisred name e.g. 'k8s-master' or 'k8s-worker-1' to: 
+Rename the nodes according to your naming concept:
+Add your desired name e.g. 'k8s-master' or 'k8s-worker-1' to: 
 ```
 sudo nano /etc/hosts
 sudo nano /etc/hostname
@@ -73,11 +73,11 @@ Now you should be able to resolve these guys with their names instead of IP addr
 Let's do some updates first
 ```
 sudo apt update
-sudo apt-get install wget
+sudo apt-get install -y wget sudo
 ```
 Change timezone (yes, this is important)
 ```
-sudo timedatectl set-timezone Europe/Zurich # change to your timezone if different
+sudo timedatectl set-timezone Europe/Zurich # change to your time zone if different
 ```
 
 Now we are going to install Docker on a specific version, targeted for ARM64.
@@ -131,7 +131,7 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
-**IMPORTANT** After the init command you get a nice 'kubeadm join' command. We need this command to join our nodes to the cluster. So note this thing down. This thing is valid for 24h. So if you ever need to join a node after this time, create a new join command with this: kubeadm token create --print-join-command
+**IMPORTANT** After the init command you get a nice 'kubeadm join' command. We need this command to join our nodes to the cluster. So, note this thing down. This thing is valid for 24h. So, if you ever need to join a node after this time, create a new join command with this: kubeadm token create --print-join-command
 
 ### Node
 SSH to your nodes and join the cluster with the previous command:
@@ -145,7 +145,8 @@ Congratulations, you now have a cluster. Close the connection to your nodes, you
 
 #### Install some Fannel
 SSH back on the master, if you did not do that already, because we are going to install our POD network and add some fannel:
-###### (I think it is about time to add a giphy to get you thorugh this wall-of-text)
+##### Fannel guy
+###### (I think it is about time to add a giphy to get you through this wall-of-text)
 ![fannel-guy]({{ site.baseurl }}/assets/images/fannel.gif)
 
 So execute these commands:
@@ -156,7 +157,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/a
 ```
 
 #### Load Balancer & Ingress
-If you are using cloud provider like GKS or AKS, you can usually create and ingress of type LoadBalancer and they will create a LB in the background for you. Since we are hosting everything on our own we have to find our own solution for that. I was using MetalLB that surves that purpose for us. You can just create a ingress with type LoadBalancer and MetalLB will expose an IP address from a predefined range. You can then forward your traffic from your router to this IP and happy days.
+If you are using cloud provider like GKS or AKS, you can usually create and ingress of type LoadBalancer and they will create a LB in the background for you. Since we are hosting everything on our own, we have to find our own solution for that. I was using MetalLB that serves that purpose for us. You can just create a ingress with type LoadBalancer and MetalLB will expose an IP address from a predefined range. You can then forward your traffic from your router to this IP and happy days.
 
 ##### Install MetalLB
 To install MetalLB use the following command:
@@ -184,8 +185,8 @@ kubectl apply -f ./metallb-config.yaml
 ```
 
 ##### Nginx Ingress Controller
-Load balancers are nice, but creating a seperate load balancer for each ingress is for sure not a nice design. Also we might want to route our traffic accoring some hostnames or path in the URL. For that we are using a Nginx controller.
-We are creating is with helm for our convenience and save some yaml files. At that point you probabbly don't have helm installed, so let's do that first:
+Load balancers are nice but creating a separate load balancer for each ingress is for sure not a nice design. Also, we might want to route our traffic according some hostnames or path in the URL. For that we are using a Nginx controller.
+We are creating is with helm for our convenience and save some yaml files. At that point you probably don't have helm installed, so let's do that first:
 ```
 wget https://get.helm.sh/helm-v3.3.0-rc.1-linux-arm64.tar.gz
 tar xvzf helm-v3.3.0-rc.1-linux-arm64.tar.gz
@@ -215,7 +216,7 @@ nginx-ingress-default-backend-8546479f64-nn845   1/1     Running   0          24
 ```
 
 ### Cert Manager
-Not having HTTPS/SSL is an absolute 'no go'. Mainly of security but also because it is nowadays so easy (and free) to get an SSL cert thanks to Let's Encrypt. It comes with one downside, your SSL certs can very quickly expire. To get rid of that we are using a cert manager (with certbot). Also checkout my [article]({{ site.baseurl }}/letsencrypt/) I wrote about this. 
+Not having HTTPS/SSL is an absolute 'no go'. Mainly of security but also because it is nowadays so easy (and free) to get an SSL cert thanks to Let's Encrypt. It comes with one downside; your SSL certs can very quickly expire. To get rid of that we are using a cert manager (with certbot). Also checkout my [article]({{ site.baseurl }}/letsencrypt/) I wrote about this. 
 
 ##### Install CRUDs
 First we gonna install some CRUDs.
@@ -231,7 +232,7 @@ helm install cert-manager jetstack/cert-manager --namespace cert-manager --versi
 ```
 
 #### Cluster Issuer
-And to conveniently use the cert manager we are going to create a clusterissuer (for all namespaces) to generate the certs for us. 
+And to conveniently use the cert manager we are going to create a ClusterIssuer (for all namespaces) to generate the certs for us. 
 
 ```
 apiVersion: cert-manager.io/v1alpha2
@@ -264,16 +265,16 @@ annotations:
 ...
 ```
 
-### Persistance Volume
-Like databases, don't you? Well who doesn't. A little bit of persistance storage never hurt anyone. To make this work we need our external SSD hard drive and use our master to serve a NFS server. 
+### Persistence Volume
+Like databases, don't you? Well who doesn't. A little bit of persistence storage never hurt anyone. To make this work we need our external SSD hard drive and use our master to serve a NFS server. 
 
 #### Install NFS Server
-So plug in your SSD hard drive and let's strart!
+So plug in your SSD hard drive and let's start!
 
 ##### On master
 First we need some NFS packages. 
 ```
-sudo apt-get install nfs-common nfs-kernel-server
+sudo apt-get install nfs-common nfs-kernel-server
 ```
 Now we check the path of our external hard drive (partition):
 ```
@@ -286,14 +287,14 @@ sudo blkid /dev/sda2
 ```
 In my case the UUID was the following:
 6bd5ab90-ec2c-4833-93bc-6619b4875316
-Now we crate a directory were we host our peristance volume claims:
+Now we create a directory where we host our persistent volume claims:
 ```
-sudo mkdir -p /srv/nfs
+sudo mkdir -p /srv/nfs
 sudo chmod -R 777 /srv/nfs
 ```
 Next step is to make sure that we automatically mount this partition on startup. 
 
-**IMPORTANT** I removed this afterwards because my /srv/nfs was always automatically mounted without these entries in fstab. And I noticed an issue after reboot with my nfs-service sometimes not being able to start (check with systemctl status nfs-server.service), when having this entry in fastab. So if you have the same problem, maybe remove these lines again if you see /srv/nfs being mounted after restart. (Sorry for this unclear description but I don't know more about this issue ATM)
+**IMPORTANT** I removed this afterwards because my /srv/nfs was always automatically mounted without these entries in fstab. And I noticed an issue after reboot with my nfs-service sometimes not being able to start (check with systemctl status nfs-server.service), when having this entry in fastab. So, if you have the same problem, maybe remove these lines again if you see /srv/nfs being mounted after restart. (Sorry for this unclear description but I don't know more about this issue ATM)
 
 But it would go like this:
 ```
@@ -303,9 +304,9 @@ UUID="6bd5ab90-ec2c-4833-93bc-6619b4875316"    /srv/nfs    auto    nosuid,nodev,
 ```
 Now we gonna startup some services:
 ```
-sudo systemctl enable rpcbind.service
-sudo systemctl enable nfs-server.service
-sudo systemctl start rpcbind.service
+sudo systemctl enable rpcbind.service
+sudo systemctl enable nfs-server.service
+sudo systemctl start rpcbind.service
 sudo systemctl start nfs-server.service
 ```
 Check the status:
@@ -335,50 +336,96 @@ You can now close your worker terminals again. ;-)
 ##### Back on the master
 Yeah we are back guys, back on the master with the next commands!
 
-#### Persistance Volume on Kubernetes
+#### Persistence Volume on Kubernetes
 To use our above installed NFS server we need to install some roles and give them access (RBAC).
 ```
-kubectl -f https://gist.githubusercontent.com/saendu/8a5f84508b36753d14663bf6f5d71b7c/raw/37f165a5e4b5e26827b6bf88ce3697e2e25e9b8d/nfs-rbac.yaml
+kubectl apply -f https://gist.githubusercontent.com/saendu/8a5f84508b36753d14663bf6f5d71b7c/raw/37f165a5e4b5e26827b6bf88ce3697e2e25e9b8d/nfs-rbac.yaml
 ```
 Afterwards we can finally deploy our NFS client!
-Edit the below file and save it as `nfs-deployment-arm.yaml`
-<script src="https://gist.github.com/saendu/1e52b7b8e0a1205f45c91cf624e069a4.js"></script>
+Create a new file with 
 ```
-kubectl -f nfs-deployment-arm.yaml
+sudo nano nfs-deployment-arm.yaml
 ```
-Change to your environment values
-<script src="https://gist.github.com/saendu/1e5395b8298572fb39a5adcb4aacb764.js"></script>
+and edit the `# CHANGE ACCORDING YOUR ENVIRONMENT` pieces below.
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nfs-client-provisioner
+  labels:
+    app: nfs-client-provisioner
+  # replace with namespace where provisioner is deployed
+  namespace: default
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: nfs-client-provisioner
+  template:
+    metadata:
+      labels:
+        app: nfs-client-provisioner
+    spec:
+      serviceAccountName: nfs-client-provisioner
+      containers:
+        - name: nfs-client-provisioner
+          image: quay.io/external_storage/nfs-client-provisioner-arm:latest
+          volumeMounts:
+            - name: nfs-client-root
+              mountPath: /persistentvolumes
+          env:
+            - name: PROVISIONER_NAME
+              value: nfs-storage # CHANGE ACCORDING YOUR ENVIRONMENT
+            - name: NFS_SERVER
+              value: 192.168.1.106 # CHANGE ACCORDING YOUR ENVIRONMENT
+            - name: NFS_PATH
+              value: /srv/nfs # CHANGE ACCORDING YOUR ENVIRONMENT
+      volumes:
+        - name: nfs-client-root
+          nfs:
+            server: 192.168.1.106 # CHANGE ACCORDING YOUR ENVIRONMENT
+            path: /srv/nfs # CHANGE ACCORDING YOUR ENVIRONMENT
+```
+Apply the file:
+```
+kubectl apply -f nfs-deployment-arm.yaml
+```
+Create a new file with 
+```
+sudo nano nfs-class.yaml
+``` 
+and edit provisioner name if necessary.
+```
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: managed-nfs-storage
+provisioner: nfs-storage # or choose another name, must match deployment's env PROVISIONER_NAME'
+parameters:
+  archiveOnDelete: "false"
+```
+Apply the file:
 ```
 kubectl -f nfs-class.yaml
 ```
-
-#### Test our persistance volume
-
-##### Create PVC
-<script src="https://gist.github.com/saendu/df2f21581f6ea75fe7898c567a9ac175.js"></script>
+Now we have our persistence volume setup and can create a PVC like so (this is just an example):
 ```
-kubectl -f https://gist.githubusercontent.com/saendu/df2f21581f6ea75fe7898c567a9ac175/raw/a73a7a158f378924236ac45751c87200c11885b7/nfs-test-pvc.yaml
-```
-
-##### Create POD with PVC
-<script src="https://gist.github.com/saendu/148e5875cf06e4e1fcf70fb483842450.js"></script>
-```
-kubectl -f https://gist.githubusercontent.com/saendu/148e5875cf06e4e1fcf70fb483842450/raw/0a7986a1bd6da75ddfcf8d13bc3330d638225fb4/nfs-test-pod.yaml
-```
-
-To check if everything works navigate to your NFS path and check if you have a SUCCESS file.
-In my case this looked like this (your GUID will be different!):
-```
-cd /srv/nfs/default-test-claim-pvc-dac79781-ae45-489a-aa71-96191b700f63/
-ls
-```
-If you can see a SUCCESS file, then this was a success! 
-
-Now we are able to create simple PersistanceVolumeClaim and just make sure that we are adding the line:
-```
-annotations:
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: test-claim
+  annotations:
     volume.beta.kubernetes.io/storage-class: "managed-nfs-storage"
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Mi
 ```
+The important piece is the annotation `volume.beta.kubernetes.io/storage-class: "managed-nfs-storage"` that we've created previous. 
 
 ### Monitoring
 Last but not least we also need something to monitor our cluster. Else it would just be some nerd project that a guy posted in the internet. Adding monitoring to our setup, makes us look a little bit like PROs. 
@@ -396,8 +443,76 @@ Now clone the project cluster-monitoring project:
 ```
 git clone https://github.com/saendu/cluster-monitoring.git
 ```
-Now we have to edit the `vars.jsonnet` file and set `k3s.enabled` to `true`, `armExporter.enabled` to `true` and change to our IP address:
-<script src="https://gist.github.com/saendu/206c2d1d138f4b1d4e8591fac2f676fe.js"></script>
+Now we have to edit the `vars.jsonnet` file and set `k3s.enabled` to `true`, `armExporter.enabled` to `true` and change the `# CHANGE ACCORDING YOUR ENVIRONMENT` pieces below:
+```
+{
+  _config+:: {
+    namespace: 'monitoring',
+  },
+  modules: [
+    { 
+      name: 'smtpRelay',
+      enabled: false,
+      file: import 'modules/smtp_relay.jsonnet',
+    },
+    {
+      name: 'armExporter',
+      enabled: true,
+      file: import 'modules/arm_exporter.jsonnet',
+    },
+    {
+      name: 'upsExporter',
+      enabled: false,
+      file: import 'modules/ups_exporter.jsonnet',
+    },
+    {
+      name: 'metallbExporter',
+      enabled: false,
+      file: import 'modules/metallb.jsonnet',
+    },
+    {
+      name: 'traefikExporter',
+      enabled: true,
+      file: import 'modules/traefik.jsonnet',
+    },
+    {
+      name: 'elasticExporter',
+      enabled: false,
+      file: import 'modules/elasticsearch_exporter.jsonnet',
+    },
+  ],
+
+  k3s: {
+    enabled: true,
+    master_ip: ['192.168.1.106'], // CHANGE ACCORDING YOUR ENVIRONMENT
+  },
+
+  suffixDomain: '192.168.1.106.nip.io',  // CHANGE ACCORDING YOUR ENVIRONMENT
+  TLSingress: true,
+  UseProvidedCerts: false,
+  TLSCertificate: importstr 'server.crt',
+  TLSKey: importstr 'server.key',
+  enablePersistence: {
+    prometheus: false,
+    grafana: false,
+    prometheusPV: '',
+    grafanaPV: '',
+    storageClass: '',
+    prometheusSizePV: '2Gi',
+    grafanaSizePV: '20Gi',
+  },
+  prometheus: {
+    retention: '15d',
+    scrapeInterval: '30s',
+    scrapeTimeout: '30s',
+  },
+  grafana: {
+    from_address: 'youremail@gmail.com', // CHANGE ACCORDING YOUR ENVIRONMENT
+    //Ex. plugins: ['grafana-piechart-panel', 'grafana-clock-panel'],
+    plugins: [],
+  },
+}
+```
 
 > As `suffixDomain` your can use `192-168-1-106-nip.io` (in order to not edit your hosts file) or as in my case I used a public domain because nip.io did not really serve me well. 
 
@@ -410,7 +525,7 @@ sudo make vendor && sudo make
 ```
 kubectl create namespace monitoring
 ```
-3. If you are like me and want the grafana dashboard exposed to the outside, you have to edit the 
+3. If you are like me and want the Grafana dashboard exposed to the outside, you have to edit the 
 ```
 sudo manifests/nano ingress-grafana.yaml 
 ``` 
@@ -439,8 +554,8 @@ As you might see, we can't see much on our dashboard. This is because we don't h
 #### Create a dashboard
 The project from [Carlos Eduardo](https://github.com/carlosedp) has a sweet kubernetes cluster dashboard ready for us to use. So let's install that thing.
 
-1. Navigat to your dashboard section https://grafana.sandrofelder.ch/dashboards
-2. Click on `Import` and paste [grafana-dashboard.json](https://gist.githubusercontent.com/saendu/d34b4fc0b07ec6d885a32379d4154790/raw/5d83927a4e658a20586123df55fd151286f29d15/grafana-dashboard.json) to `Import via panal json` 
+1. Navigate to your dashboard section https://grafana.sandrofelder.ch/dashboards
+2. Click on `Import` and paste [grafana-dashboard.json](https://gist.githubusercontent.com/saendu/d34b4fc0b07ec6d885a32379d4154790/raw/5d83927a4e658a20586123df55fd151286f29d15/grafana-dashboard.json) to `Import via panel json` 
 3. Click `Load`
 4. Now, go back to your dashboards click on the newly created dashboard and after some minutes you should see all metrics collected from Prometheus automatically for you
 
@@ -451,19 +566,19 @@ I think this is pretty straight forward way of getting some basic metrics about 
 - Node down
 
 ## That's it folks!
-You have your own private cloud sitting in your livingroom that can basically do everything you would expect from a cloud provider:
+You have your own private cloud sitting in your living room that can basically do everything you would expect from a cloud provider:
 - Load balancing
 - Ingress
 - Monitoring
 
 <iframe src="https://giphy.com/embed/Um3ljJl8jrnHy" width="480" height="314" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
-Feel free to hit me with some questions or thoughts in the comment section below (you don't need an account).
+Feel free to hit me with some questions or thoughts in the comment section below.
 
 Until next time . . .
 
-#### Aknowledgements
-Here some articles that help get thorugh all of this:
+#### Acknowledgements
+Here some articles that help get through all of this:
 - [How to build your own Raspberry Pi Kubernetes Cluster](https://wiki.learnlinux.tv/index.php/How_to_build_your_own_Raspberry_Pi_Kubernetes_Cluster)
 - [Building a Pi Kubernetes Cluster – Part 3 – Worker Nodes and MetalLB](https://www.shogan.co.uk/kubernetes/building-a-pi-kubernetes-cluster-part-3-worker-nodes-and-metallb/)
 - [Develop and Deploy Kubernetes Applications on a Raspberry Pi Cluster](https://medium.com/better-programming/develop-and-deploy-kubernetes-applications-on-a-raspberry-pi-cluster-fbd4d97a904c)
