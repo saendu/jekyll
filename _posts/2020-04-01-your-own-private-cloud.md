@@ -6,7 +6,10 @@ categories: [ Raspberry Pi ]
 image: assets/images/raspberry4-cluster.jpg
 tags: [sticky, featured]
 ---
-If you want to learn something about **Raspberry Pi, Ubuntu, Docker, Kubernetes** and get a taste of **ARM64**, then building your own Raspberry Pi Kubernetes Cluster is o good starting point. Or at least, I learned a lot about these technologies when building this. However I was sitting in a lock-down and had plenty of time to spend. So if you want to speed up a little bit and skip the hours debugging and fiddling around Github issue pages, then I recommend you to follow my guide here. At the time writing this article it is probabbly the most condensed knowledge to have a propper mini clud. Or at least I would have considered myself lucky to find an article like that. But maybe I was not looking hard enough ;-).
+Hey! Also having some Raspberry Pi 4s lying around, and not really sure what you wanna do with them? And you want to learn something about **Ubuntu, Docker, Kubernetes** and get a taste of **ARM64**? Then building your own Raspberry Pi Kubernetes Cluster is o good starting point. Or at least, I've learned a lot about these technologies when building this. However I was sitting in a lock-down and had plenty of time to spend. So if you want to speed up a little bit and skip the hours debugging and fiddling around Github issue pages, then I recommend you to follow my guide here. 
+
+I tried to put everything you'll need into this article without you having to leave this page.  
+
 
 ### What we will build
 Our goal is to build a proper mini cloud. So that means is, you should be able to run various applications (servers) running behind a single or multiple URLs having proper load balancing (and autoscaling) and all of this cramped up in 10x8x6cm of space in your living room. 
@@ -22,13 +25,16 @@ We are using the following components:
 - An **NFS** server for persistance storage
 - **Grafana** to get some health metrics about our cluster
 
+> It will help if you have a basic understanding of those technologies. If not I think you should still be able to follow and learn on the way along. 
+
 ### What hardware you will need
 1. At least two (actually three, or in my case four) Raspberry Pi 4
 2. An external SSD hard drive
 3. A switch or a router to plugin your RPIs
 4. Some basic understanding about engineering and this article
 
-### Basic installation
+### Basic Raspberry Pi installation
+Our Raspberry Pi's need a basic setup before we can start with the fun. For completeness sake I added this setup to this guide as well and not just be lazy and write 'setup Ubuntu 20.04', 'install docker', etc. Because with these little ARM64 guys some commands might be a bit different, especially when installing binaries. 
 
 #### Make your Raspberries ready
 If you bought a Raspberry Pi with a preinstalled Rasbian OS we first want to get rid of this an install Ubuntu 20.04. Reason is, I am not quite an expert with Raspbian and Ubuntu gives us plenty of useful features with some minor drawbacks in terms of performance. 
@@ -48,10 +54,7 @@ This can take a couple of minutes, read on and be prepared.
 Afther the process is done, plug the SD cards back to the RPIs and plug them to your router or switch and give them some power. 
 
 ##### Start with installation
-Afterwards login to your RPI (find the IP address in your router):
-```
- ssh ubuntu:ubuntu@<yourIPaddress>
-```
+Afterwards login to your RPI (find the IP address in your router).
 It will probabbly ask you to change the password, so be a PRO and do that. 
 
 In our Kuberenetes cluster you will have one master and several worker nodes. For simplicity we will call the master 'master' and the worker nodes 'nodes'. So in my case I have one master and three worker nodes. 
@@ -72,7 +75,7 @@ Let's do some updates first
 sudo apt update
 sudo apt-get install wget
 ```
-Change timezone (yes this is important)
+Change timezone (yes, this is important)
 ```
 sudo timedatectl set-timezone Europe/Zurich # change to your timezone if different
 ```
@@ -116,7 +119,7 @@ sudo reboot
 If you executed these steps just for one RPI do this now for all the others. As mentioned, this is our basic installation or prerequisite for all other steps. 
 
 ### Master
-The next steps we just execute on your master. So do a quick login with 'ssh user@k8s-master' and proceed.
+The next steps we just execute on your master. So do a quick SSH login to your master.
 
 #### Init Kubernetes
 Hey, we are going to build a kubernetes cluster, so at one point we have to initialize kubernetes on your master. For this we are using 'kubeadm init' and we choose a network range of 10.244.0.0/16. 
@@ -131,7 +134,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 **IMPORTANT** After the init command you get a nice 'kubeadm join' command. We need this command to join our nodes to the cluster. So note this thing down. This thing is valid for 24h. So if you ever need to join a node after this time, create a new join command with this: kubeadm token create --print-join-command
 
 ### Node
-Let's join or nodes to the cluster with the previous command:
+SSH to your nodes and join the cluster with the previous command:
 ```
 kubeadm join <MASTERIP>:6443 --token <TOKEN> --discovery-token-ca-cert-hash <HASH>
 ```
@@ -212,7 +215,7 @@ nginx-ingress-default-backend-8546479f64-nn845   1/1     Running   0          24
 ```
 
 ### Cert Manager
-Not having HTTPS/SSL is an absolute nogo. Mainly of security but also because it is nowadays so easy (and free) to get an SSL cert thanks to Let's Encrypt. It comes with one downside, your SSL certs can very quickly expire. To get rid of that we are using a cert manager (with certbot). Also checkout my [article]({{ site.baseurl }}/letsencrypt/) I wrote about this. 
+Not having HTTPS/SSL is an absolute 'no go'. Mainly of security but also because it is nowadays so easy (and free) to get an SSL cert thanks to Let's Encrypt. It comes with one downside, your SSL certs can very quickly expire. To get rid of that we are using a cert manager (with certbot). Also checkout my [article]({{ site.baseurl }}/letsencrypt/) I wrote about this. 
 
 ##### Install CRUDs
 First we gonna install some CRUDs.
@@ -290,7 +293,7 @@ sudo chmod -R 777 /srv/nfs
 ```
 Next step is to make sure that we automatically mount this partition on startup. 
 
-> **IMPORTANT**: I removed this afterwards because my /srv/nfs was always automatically mounted without these entries in fstab. And I noticed an issue after reboot with my nfs-service not being able to start (check with systemctl status nfs-server.service), when having this entry in fastab. So if you have the same problem, maybe remove these lines again if you see a /srv/nfs path being mounted after restart. (Sorry for this unclear description but I don't know more ATM)
+**IMPORTANT** I removed this afterwards because my /srv/nfs was always automatically mounted without these entries in fstab. And I noticed an issue after reboot with my nfs-service sometimes not being able to start (check with systemctl status nfs-server.service), when having this entry in fastab. So if you have the same problem, maybe remove these lines again if you see /srv/nfs being mounted after restart. (Sorry for this unclear description but I don't know more about this issue ATM)
 
 But it would go like this:
 ```
@@ -338,6 +341,7 @@ To use our above installed NFS server we need to install some roles and give the
 kubectl -f https://gist.githubusercontent.com/saendu/8a5f84508b36753d14663bf6f5d71b7c/raw/37f165a5e4b5e26827b6bf88ce3697e2e25e9b8d/nfs-rbac.yaml
 ```
 Afterwards we can finally deploy our NFS client!
+Edit the below file and save it as `nfs-deployment-arm.yaml`
 <script src="https://gist.github.com/saendu/1e52b7b8e0a1205f45c91cf624e069a4.js"></script>
 ```
 kubectl -f nfs-deployment-arm.yaml
@@ -376,13 +380,93 @@ annotations:
     volume.beta.kubernetes.io/storage-class: "managed-nfs-storage"
 ```
 
-### Dashboard
-And for the fans of GUIs like this you can install your very own Kubernetes dashboard:
-```
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
-kubectl create clusterrolebinding dashboard-admin-sa --clusterrole=cluster-admin --serviceaccount=default:dashboard-admin-sa
-kubectl proxy --address='0.0.0.0' --accept-hosts='^*$'
-http://k8s-master:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
-```
 ### Monitoring
 Last but not least we also need something to monitor our cluster. Else it would just be some nerd project that a guy posted in the internet. Adding monitoring to our setup, makes us look a little bit like PROs. 
+
+#### Install 
+So let's do this. First we have to login to our master and switch our user to root user:
+```
+sudo su
+```
+Now we are going to install some prerequisites (to be able to use `make`):
+```
+apt-get update && apt-get install -y build-essential golang
+```
+Now clone the project cluster-monitoring project: 
+```
+git clone https://github.com/saendu/cluster-monitoring.git
+```
+Now we have to edit the `vars.jsonnet` file and set `k3s.enabled` to `true`, `armExporter.enabled` to `true` and change to our IP address:
+<script src="https://gist.github.com/saendu/206c2d1d138f4b1d4e8591fac2f676fe.js"></script>
+
+> As `suffixDomain` your can use `192-168-1-106-nip.io` (in order to not edit your hosts file) or as in my case I used a public domain because nip.io did not really serve me well. 
+
+We are not done yet, so now the fun begins:
+1. Execute the following command in the root dictionary (this can take a while)
+```
+sudo make vendor && sudo make
+```
+2. Create the namespace for your monitoring components 
+```
+kubectl create namespace monitoring
+```
+3. If you are like me and want the grafana dashboard exposed to the outside, you have to edit the 
+```
+sudo manifests/nano ingress-grafana.yaml 
+``` 
+And add the following lines:
+```
+...
+annotations:
+   kubernetes.io/ingress.class: nginx
+   cert-manager.io/cluster-issuer: letsencrypt-prod
+...
+tls:
+  - hosts:
+    - yourdomain.ch
+    secretName: yourname-tls
+...
+```
+4. Now we can apply the created yaml files with the following command:
+```
+make deploy
+``` 
+
+You should now be able to navigate to https://grafana.yourdomain.ch and login with username: `admin` and password `admin`. Be a PRO again and change that password to a stronger one. 
+
+As you might see, we can't see much on our dashboard. This is because we don't have one. 
+
+#### Create a dashboard
+The project from [Carlos Eduardo](https://github.com/carlosedp) has a sweet kubernetes cluster dashboard ready for us to use. So let's install that thing.
+
+1. Navigat to your dashboard section https://grafana.sandrofelder.ch/dashboards
+2. Click on `Import` and paste [grafana-dashboard.json](https://gist.githubusercontent.com/saendu/d34b4fc0b07ec6d885a32379d4154790/raw/5d83927a4e658a20586123df55fd151286f29d15/grafana-dashboard.json) to `Import via panal json` 
+3. Click `Load`
+4. Now, go back to your dashboards click on the newly created dashboard and after some minutes you should see all metrics collected from Prometheus automatically for you
+
+I think this is pretty straight forward way of getting some basic metrics about CPU, Memory, Network and you even have some alerts predefined for you from the alertmanager like:
+- CPU temperature
+- CPU usage
+- Memory usage
+- Node down
+
+## That's it folks!
+You have your own private cloud sitting in your livingroom that can basically do everything you would expect from a cloud provider:
+- Load balancing
+- Ingress
+- Monitoring
+
+<iframe src="https://giphy.com/embed/Um3ljJl8jrnHy" width="480" height="314" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+Feel free to hit me with some questions or thoughts in the comment section below (you don't need an account).
+
+Until next time . . .
+
+#### Aknowledgements
+Here some articles that help get thorugh all of this:
+- [How to build your own Raspberry Pi Kubernetes Cluster](https://wiki.learnlinux.tv/index.php/How_to_build_your_own_Raspberry_Pi_Kubernetes_Cluster)
+- [Building a Pi Kubernetes Cluster – Part 3 – Worker Nodes and MetalLB](https://www.shogan.co.uk/kubernetes/building-a-pi-kubernetes-cluster-part-3-worker-nodes-and-metallb/)
+- [Develop and Deploy Kubernetes Applications on a Raspberry Pi Cluster](https://medium.com/better-programming/develop-and-deploy-kubernetes-applications-on-a-raspberry-pi-cluster-fbd4d97a904c)
+- [Provision Kubernetes NFS clients on a Raspberry Pi homelab](https://opensource.com/article/20/6/kubernetes-nfs-client-provisioning)
+- [Setup a Kubernetes 1.9.0 Raspberry Pi cluster on Raspbian using Kubeadm](https://kubecloud.io/setup-a-kubernetes-1-9-0-raspberry-pi-cluster-on-raspbian-using-kubeadm-f8b3b85bc2d1)
+- And many many more...
