@@ -221,7 +221,7 @@ Not having HTTPS/SSL is an absolute 'no go'. Mainly of security but also because
 ##### Install CRUDs
 First we gonna install some CRUDs.
 ```
-kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.15.1/cert-manager.crds.yaml
+kubectl apply --validate=false -f https://gist.githubusercontent.com/saendu/a9626d540950a1a96c82d81e7a2c0e54/raw/a466d7603c116584e6d3ddbc64e9dbca2c1070e6/cert-manager.crds.yaml
 ```
 
 ##### Install Cert Manager
@@ -408,7 +408,7 @@ parameters:
 ```
 Apply the file:
 ```
-kubectl -f nfs-class.yaml
+kubectl apply -f nfs-class.yaml
 ```
 Now we have our persistence volume setup and can create a PVC like so (this is just an example):
 ```
