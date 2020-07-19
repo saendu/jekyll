@@ -577,7 +577,7 @@ Feel free to hit me with some questions or thoughts in the comment section below
 
 Until next time . . .
 
-#### Acknowledgements
+#### Acknowledgements 
 Here some articles that help get through all of this:
 - [How to build your own Raspberry Pi Kubernetes Cluster](https://wiki.learnlinux.tv/index.php/How_to_build_your_own_Raspberry_Pi_Kubernetes_Cluster)
 - [Building a Pi Kubernetes Cluster – Part 3 – Worker Nodes and MetalLB](https://www.shogan.co.uk/kubernetes/building-a-pi-kubernetes-cluster-part-3-worker-nodes-and-metallb/)
@@ -585,3 +585,5 @@ Here some articles that help get through all of this:
 - [Provision Kubernetes NFS clients on a Raspberry Pi homelab](https://opensource.com/article/20/6/kubernetes-nfs-client-provisioning)
 - [Setup a Kubernetes 1.9.0 Raspberry Pi cluster on Raspbian using Kubeadm](https://kubecloud.io/setup-a-kubernetes-1-9-0-raspberry-pi-cluster-on-raspbian-using-kubeadm-f8b3b85bc2d1)
 - And many many more...
+
+:heart:
