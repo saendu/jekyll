@@ -7,7 +7,7 @@ image: assets/images/innovation-technology.jpg
 ---
 Innovation is driven by technology. Or is it the other way around? Actually it is even more complicated than that. The relationship between technology and innovation is somewhat 'special'. 
 
-```TL;TR; Build your product to be ready to rebuild it.```
+> TL;TR; Build your product to be ready to rebuild it.
 <iframe src="https://giphy.com/embed/91fEJqgdsnu4E" width="480" height="368" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/camera-kickstarter-possibilities-91fEJqgdsnu4E"></a></p>
 
 ### Building MVPs
