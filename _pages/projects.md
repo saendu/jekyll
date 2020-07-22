@@ -21,8 +21,7 @@ Currently there are six main projects running on my private cloud:
 
 Obviously enough I needed something to let all my projects run. So a Raspberry would have been a good choice. But since buying just 'one' RPI was too easy, I instead bought four and build my own Raspberry Pie 4 Cluster. And what would be a cluster without an orchestrator. That is why I decided to create a Kubernetes Cluster with my Raspberries. 
 
-[fuebiapp]: https://fuebiapp.com
-[afterworkbeer]: https://afterworkbeer.com
+If you wanna know more or maybe build your own, then read me article [Building your own private cloud with Raspberry Pi 4 and Kubernetes]({{ site.baseurl }}/your-own-private-cloud/)
 
 ## Fuebiapp
 ![Fuebiapp-Banner]({{ site.baseurl }}/assets/images/fuebiapp-banner.jpg)
@@ -64,8 +63,3 @@ If you find any typos, mistake or any other blunder let me know in the comments 
 
 Comming soon. 
 
-
-## Microservices with OAM and Dapr
-**Tech**: Microservices, OAM, Dapr, Asp.net, Express
-
-Comming soon.
