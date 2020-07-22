@@ -27,7 +27,6 @@ Obviously enough I needed something to let all my projects run. So a Raspberry w
 ## Fuebiapp
 ![Fuebiapp-Banner]({{ site.baseurl }}/assets/images/fuebiapp-banner.jpg)
 **Tech**: Jitsi, React, Redux 
-**Websites**: [fuebiapp.com](https://fuebiapp.com), [afterworkbeer.com](https://afterworkbeer.com) 
 **Github**: [fuebiapp-web](https://github.com/saendu/fuebiapp-web), [fuebiapp-docker](https://github.com/saendu/fuebiapp-docker)
 
 In my local dialect 'Fuebi' means 'afterwork beer'. Fuebiapp.com (or afterworkbeer.com) was one of my first Corona projects. Reason was I was missing the social times when we could have a beer together and get on each others nerves with poking others to take another round or just have a shots round.
@@ -39,6 +38,7 @@ Some of the features include:
 + Beer counter
 + Poke somebody to have another beer
 
+**Websites**: [fuebiapp.com](https://fuebiapp.com), [afterworkbeer.com](https://afterworkbeer.com) 
 
 ## Home Control API
 ![Cluster]({{ site.baseurl }}/assets/images/home-automation.jpg)
@@ -53,7 +53,7 @@ If you wanna know more, read my article [Hey Siri, I wanna sleep!]({{ site.baseu
 ![Website]({{ site.baseurl }}/assets/images/website.jpg)
 
 **Tech**: Jekyll
-**Github**: [HomeControl](https://github.com/saendu/Jekyll)
+**Github**: [Jekyll](https://github.com/saendu/Jekyll)
 
 The main idea why I created a private website in the first place, was to publish articles about my projects. Almost everybody I was explaining what I did during COVID was interessted to build something similar. So I figured what not do something for the community and contribute back and share all my knowledge. Afterall I also came only that far because other people did the same before me. So here I go. 
 
