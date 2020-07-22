@@ -50,9 +50,14 @@ The Home Control project allows me to control my IKEA smart plugs with Siri. It 
 If you wanna know more, read my article [Hey Siri, I wanna sleep!]({{ site.baseurl }}/home-automation) that describes the project in detail.
 
 ## Private website 
-**Tech**: Raspberry Pie 4, Kubernetes, Ubuntu
+![Website]({{ site.baseurl }}/assets/images/website.jpg)
 
-Comming soon. 
+**Tech**: Jekyll
+**Github**: [HomeControl](https://github.com/saendu/Jekyll)
+
+The main idea why I created a private website in the first place, was to publish articles about my projects. Almost everybody I was explaining what I did during COVID was interessted to build something similar. So I figured what not do something for the community and contribute back and share all my knowledge. Afterall I also came only that far because other people did the same before me. So here I go. 
+
+If you find any typos, mistake or any other blunder let me know in the comments section, or create an issue on Github. I will be very greatful! 
 
 ## Mail Gateway
 **Tech**: Raspberry Pie 4, Kubernetes, Ubuntu
