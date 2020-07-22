@@ -2,7 +2,7 @@
 layout: post
 title:  "Building your own private cloud with Raspberry Pi 4 and Kubernetes"
 author: sandro
-categories: [ Raspberry Pi ]
+categories: [ Projects ]
 image: assets/images/raspberry4-cluster.jpg
 tags: [sticky, featured]
 ---
