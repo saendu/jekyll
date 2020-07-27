@@ -161,6 +161,7 @@ That's it. Now you can create a PUT call to your endpoint and toggle your lamp.
 The next thing we wanna do is create a Siri shortcut in order to do a PUT call to our endpoint. For this we basically need to steps:
 1. A URL step
 2. A get contents of URL step
+
 ![walking]({{ site.baseurl }}/assets/images/siri-shortcut.jpg)
 
 Make sure that you replace the URL & the Authorization secret provided in your backend. 
