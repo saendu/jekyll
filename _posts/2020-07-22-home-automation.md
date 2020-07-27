@@ -40,7 +40,7 @@ Yeah in IKEA's marketing departments there are working some clever guys. Because
 6. Move plug into one of your rooms by drag and drop (if you don't have room create one)
 7. Your plug should now be ready to use
 
-Ok we can now control your plug with the very useful IKEA Home Smart app. Is there a option to connect the smart home app to Siri? 
+Ok, we can now control our plug with the very useful IKEA Home Smart app. Is there a option to connect the smart home app to Siri? 
 <div style="width:100%;height:0;padding-bottom:58%;position:relative;"><iframe src="https://giphy.com/embed/wYyTHMm50f4Dm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 Nooope for sure not. Would be a bit too easy, right?
 
