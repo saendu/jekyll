@@ -1,17 +1,17 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: home-sandrofelder-ingress
+  name: sandrofelder-ingress
   annotations:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   tls:
     - hosts:
-      - home.sandrofelder.ch
-      secretName: home-sandrofelder-ch-tls
+      - sandrofelder.ch
+      secretName: sandrofelder-ch-tls
   rules:
-  - host: home.sandrofelder.ch
+  - host: sandrofelder.ch
     http:
       paths:
       - path: /
