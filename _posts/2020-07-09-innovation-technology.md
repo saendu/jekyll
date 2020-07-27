@@ -8,7 +8,7 @@ image: assets/images/innovation-technology.jpg
 Innovation is driven by technology. Or is it the other way around? Actually it is even more complicated than that. The relationship between technology and innovation is somewhat 'special'. 
 
 > TL;TR; Build your product to be ready to rebuild it.
-<iframe src="https://giphy.com/embed/91fEJqgdsnu4E" width="480" height="368" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/camera-kickstarter-possibilities-91fEJqgdsnu4E"></a></p>
+<div style="width:100%;height:0;padding-bottom:77%;position:relative;"><iframe src="https://giphy.com/embed/91fEJqgdsnu4E" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
 ### Building MVPs
 When we built MVPs we need speed. Lots of speed. We are agile, we change and when we are done we know what we wanted to know. And then, what happens next? Well we probably start from scratch and build the product with a solid base, right? Yeah sure...
@@ -18,7 +18,7 @@ If every time I would have got a nickel when I heard the following statement:
 I would now been slurping my Caipirinhas somewhere nice and warm and for sure not writing blog posts about IT. Or would I? ;-) 
 
 Representative studies (actually just my experience) showed that 9/10 MVPs will survive the guillotine and proceed on. Resulting us having products on a wobbling base. Nobody wants that except your competitors.
-<iframe src="https://giphy.com/embed/l1KVaj5UcbHwrBMqI" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/lifetimetv-adorable-babies-l1KVaj5UcbHwrBMqI"></a></p>
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/l1KVaj5UcbHwrBMqI" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 But they have these kinds of products probably too, so don't get too sad. 
 
 ### Hitting the sweet spot

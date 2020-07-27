@@ -547,14 +547,14 @@ tls:
 make deploy
 ``` 
 
-You should now be able to navigate to https://grafana.yourdomain.ch and login with username: `admin` and password `admin`. Be a PRO again and change that password to a stronger one. 
+You should now be able to navigate to `https://grafana.yourdomain.ch` and login with username: `admin` and password `admin`. Be a PRO again and change that password to a stronger one. 
 
 As you might see, we can't see much on our dashboard. This is because we don't have one. 
 
 #### Create a dashboard
 The project from [Carlos Eduardo](https://github.com/carlosedp) has a sweet kubernetes cluster dashboard ready for us to use. So let's install that thing.
 
-1. Navigate to your dashboard section https://grafana.sandrofelder.ch/dashboards
+1. Navigate to your dashboard section `https://grafana.sandrofelder.ch/dashboards`
 2. Click on `Import` and paste [grafana-dashboard.json](https://gist.githubusercontent.com/saendu/d34b4fc0b07ec6d885a32379d4154790/raw/5d83927a4e658a20586123df55fd151286f29d15/grafana-dashboard.json) to `Import via panel json` 
 3. Click `Load`
 4. Now, go back to your dashboards click on the newly created dashboard and after some minutes you should see all metrics collected from Prometheus automatically for you
@@ -571,7 +571,7 @@ You have your own private cloud sitting in your living room that can basically d
 - Ingress
 - Monitoring
 
-<iframe src="https://giphy.com/embed/Um3ljJl8jrnHy" width="480" height="314" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div style="width:100%;height:0;padding-bottom:65%;position:relative;"><iframe src="https://giphy.com/embed/Um3ljJl8jrnHy" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
 Feel free to hit me with some questions or thoughts in the comment section below.
 

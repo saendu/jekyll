@@ -41,7 +41,7 @@ Yeah in IKEA's marketing departments there are working some clever guys. Because
 7. Your plug should now be ready to use
 
 Ok we can now control your plug with the very useful IKEA Home Smart app. Is there a option to connect the smart home app to Siri? 
-<iframe src="https://giphy.com/embed/wYyTHMm50f4Dm" width="480" height="277" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div style="width:100%;height:0;padding-bottom:58%;position:relative;"><iframe src="https://giphy.com/embed/wYyTHMm50f4Dm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 Nooope for sure not. Would be a bit too easy, right?
 
 ## Build your own Home Control API
@@ -147,7 +147,7 @@ module.exports = authenticate;
 ```
 
 **NOTE** that we are using basicAuth.safeCompare() and not a '==' or '===' comparison that no hacker can perform a [Timing attack](https://en.wikipedia.org/wiki/Timing_attack).
-<iframe src="https://giphy.com/embed/jUEuQU7RGyYsdnXHvF" width="480" height="321" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<div style="width:100%;height:0;padding-bottom:67%;position:relative;"><iframe src="https://giphy.com/embed/jUEuQU7RGyYsdnXHvF" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
 Last thing we need to do is using the middleware in our route:
 ```

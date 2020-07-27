@@ -32,7 +32,7 @@ And then we simply create our standalone cert like so:
 sudo certbot certonly --manual -d mysite.sandrofelder.ch --agree-tos --no-bootstrap --manual-public-ip-logging-ok --preferred-challenges http-01
 ```
 
-We have to put some info in the prompts and then we get our wanted cert files in the location: /etc/letsencrypt/live/mysite.sandrofelder.ch/. So we take those files and probably use it in one of our apps. In my case I have a kubernetes cluster so I would do something like that:
+We have to put some info in the prompts and then we get our wanted cert files in the location: `/etc/letsencrypt/live/mysite.sandrofelder.ch/`. So we take those files and probably use it in one of our apps. In my case I have a kubernetes cluster so I would do something like that:
 kubectl create secret tls mysite-sandrofelder-ch-tls --cert=fullchain1.pem --key=privkey1.pem
 And now we gonna use that secret in one of our ingress, like so:
 ```
