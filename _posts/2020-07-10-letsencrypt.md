@@ -5,12 +5,11 @@ author: sandro
 categories: [ DEV ]
 image: assets/images/lets-encrypt.png
 ---
-
 Yeah you read right. You should not do that. Ant the reason is, because your address bar will look sooner or later like that:
 
-`` TL;TR Use certbot to create & renew the certs for you in the background. --A guy that cares, 2020 ``
+![NOTSECURE]({{ site.baseurl }}/assets/images/ssl-not-secure-warning.png)
 
-#### In the beginning there was a shortloved cert
+#### In the beginning there was a shortli(o)ved cert
 
 And who wants an unsafe afterwork beer, right? You guessed it: Nobody.
 Let’s wrap it up a bit. Let’s Encrypt is probably the saviour of the 21 century. Well maybe that is a bit over-exaggerated but in the end they probably gave us DEVs the most convenient and obviously the cheapest solution to secure our web applications.
