@@ -16,6 +16,9 @@ spec:
       labels:
         io.kompose.service: jekyll
     spec:
+      env:
+        - name: JEKYLL_ENV
+          value: production
       containers:
       - name: jekyll
         image: blacktr/jekyll:arm64
