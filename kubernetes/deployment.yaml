@@ -16,11 +16,11 @@ spec:
       labels:
         io.kompose.service: jekyll
     spec:
-      env:
-        - name: JEKYLL_ENV
-          value: production
       containers:
       - name: jekyll
+        env:
+        - name: JEKYLL_ENV
+          value: production
         image: blacktr/jekyll:arm64
         imagePullPolicy: IfNotPresent
         ports:
