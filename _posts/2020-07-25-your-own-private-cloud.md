@@ -3,7 +3,7 @@ layout: post
 title:  "Building your own private Cloud with Raspberry Pi 4 and Kubernetes"
 author: sandro
 categories: [ Projects ]
-image: assets/images/raspberry4-cluster.jpg
+image: assets/images/rpi4-cluster-deck.jpg
 tags: [sticky, featured]
 ---
 If you also having some Raspberry Pi 4 lying around, and not really sure what you wanna do with them, then I might have an idea that you could like. Build you own private cloud! And learn something about **Ubuntu, Docker, Kubernetes** and get a taste of **ARM64**. Or at least, I've learned a lot about these technologies when I was building this. However, I was sitting in a lock-down and had plenty of time to spend. So, if you want to speed up a little bit and skip the hours debugging and fiddling around Github issue pages, then I recommend you follow my guide and enjoy. 

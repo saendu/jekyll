@@ -8484,4 +8484,9 @@ div.author > img {
   }
 }
 
+.sticky-image {
+    background-position: center;
+    background-size: cover;
+}
+
 
