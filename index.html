@@ -146,7 +146,7 @@ description: "A website of a guy that cares."
                         </p>
                         <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Read More</a>
                     </div>
-                    <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({% if post.image contains "://" %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image }}{% endif %}" alt="{{ fourth_post.title }});">	
+                    <div class="col-md-6 d-none d-md-block pr-0 sticky-image" style="background-size:cover;background-image:url({% if post.image contains "://" %}{{ post.image }}{% else %}{{site.baseurl}}/{{ post.image }}{% endif %}" alt="{{ fourth_post.title }});">	
                     </div>
                 </div>
             </div>
