@@ -16,11 +16,15 @@ If every time I would have got a nickel when I heard the following statement in 
 
 > Let's not make things more complicated than we need to. We are anyway gonna throw this away. 
 
-I would now been slurping my Caipirinhas somewhere nice and warm and for sure not writing blog posts about IT. Or would I? :tropical_drink:
+I would now been slurping my Caipirinhas somewhere nice and warm and for sure not writing blog posts about IT. 
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/5xtDarqlsEW6F7F14Fq" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+Or would I?
 
 Representative studies (actually just my experience) showed that 9/10 MVPs or prototypes will survive the guillotine and proceed on. Resulting us having products on a wobbling base. Nobody wants that except your competitors. And this makes us feel like:
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/l1KVaj5UcbHwrBMqI" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 But they have these kinds of products probably too, so don't get too sad. 
+
+> Ok, I attracted you in with some Giphys, now let's get to the facts. 
 
 ### Hitting the sweet spot
 So, when is the right moment to say: now is the time to work on that refactoring. And lose a little bit of that speed for a good investment into the future - into a stable future. Unfortunately, this is the million-dollar-question and I can't give you the perfect answer to that (see Caipirinhas-reason above) but I try to give you some guidance:
