@@ -211,3 +211,9 @@
     outline: 0 !important;
     outline: 0 !important;
 }
+
+@media screen and (max-width: 1425px) {
+    .slider--item {
+        max-height: 500px !important;
+    }
+}
