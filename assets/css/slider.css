@@ -5,9 +5,17 @@
 
 .slider--item {
     width: 40vw;
-    height: 40vh;
+    height: 62vh;
+    max-height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media (max-width: 414px) {
+    .slider--item {
+        width: 40vw;
+        height: 40vh;
+    }
 }
 
 .slick-slide {
