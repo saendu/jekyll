@@ -11114,10 +11114,9 @@ html {
 }
 
 @media (min-width: 1200px) {
-
   div.author,
   div.content {
-    left: -4rem;
+    left: 2rem;
   }
 }
 
@@ -11129,6 +11128,11 @@ div.author>img {
 @media (min-width: 1150px) {
   div.author>img {
     margin-left: 1.5rem;
+  }
+  
+  .justify-content-center {
+    margin-left: -100px;
+    margin-right: 100px;
   }
 }
 
