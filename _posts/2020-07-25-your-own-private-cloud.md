@@ -287,7 +287,7 @@ Now we have to get the PARTUUID or UUID of our partition/disk:
 ```
 sudo blkid /dev/sda2
 ```
-In my case the UUID was the following:
+In my case the PARTUUID was the following:
 6bd5ab90-ec2c-4833-93bc-6619b4875316
 Now we create a directory where we host our persistent volume claims:
 ```
