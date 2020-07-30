@@ -283,7 +283,7 @@ Now we check the path of our external hard drive (partition):
 sudo fdisk -l
 ```
 Note down the Device path, in my case it was /dev/sda2
-Now we have to get the PARTUUID of our partition:
+Now we have to get the PARTUUID or UUID of our partition/disk:
 ```
 sudo blkid /dev/sda2
 ```
@@ -296,13 +296,11 @@ sudo chmod -R 777 /srv/nfs
 ```
 Next step is to make sure that we automatically mount this partition on startup. 
 
-**IMPORTANT** I removed this afterwards because my /srv/nfs was always automatically mounted without these entries in fstab. And I noticed an issue after reboot with my nfs-service sometimes not being able to start (check with systemctl status nfs-server.service), when having this entry in fastab. So, if you have the same problem, maybe remove these lines again if you see /srv/nfs automatically being mounted after restart. (Sorry for this unclear description but I don't know more about this issue at the moment)
-
 But it would go like this:
 ```
 sudo nano /etc/fstab 
 # add this to the next line
-UUID="6bd5ab90-ec2c-4833-93bc-6619b4875316"    /srv/nfs    auto    nosuid,nodev,nofail,noatime 0 0
+PARTUUID=6bd5ab90-ec2c-4833-93bc-6619b4875316    /srv/nfs    auto    nosuid,nodev,nofail,noatime 0 0
 ```
 Now we gonna startup some services:
 ```
@@ -320,7 +318,7 @@ systemctl status nfs-server.service
 Now we are going to export our shared path (you might want to use your IP range):
 ```
 sudo nano /etc/exports
-/srv/nfs    192.168.1.0/24(rw,no_root_squash)
+/srv/nfs    192.168.1.0/24(rw,root_squash)
 # restart the service
 sudo systemctl restart nfs-server.service
 ```
