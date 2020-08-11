@@ -11149,9 +11149,12 @@ div.author>img {
 #comments {
   background: #f0f0f0;
 }
-#disqus_thread {
-  padding: 1rem;
+@media (max-width: 1149px) {
+  #disqus_thread {
+    padding: 1rem;
+  }
 }
+
 @media (min-width: 1150px) {
   #comments {
     background: #f0f0f0;;
