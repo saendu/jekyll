@@ -11144,3 +11144,23 @@ div.author>img {
 .emoji {
   margin-bottom: 0;
 }
+
+/* Comments */
+#comments {
+  background: #f0f0f0;
+}
+#disqus_thread {
+  padding: 1rem;
+}
+@media (min-width: 1150px) {
+  #comments {
+    background: #f0f0f0;;
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+  }
+  #disqus_thread {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
