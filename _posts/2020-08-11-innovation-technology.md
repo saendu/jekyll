@@ -23,7 +23,7 @@ Representative studies (actually just my experience) showed that 9/10 MVPs or pr
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/l1KVaj5UcbHwrBMqI" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 But they have these kinds of products probably too, so don't get too sad. 
 
-> Ok, I attracted you in with some Giphys, now let's get to the facts. 
+> Ok, I attracted you in with some giphys, now let's get to the facts. 
 
 ### Hitting the refactor sweet spot
 So, when is the right moment to say: now is the time to work on that refactoring. And lose a little bit of that speed for a good investment into the future - into a stable future. Unfortunately, this is the million-dollar-question and I won't be able to give you a perfect answer (see Caipirinhas-reason above) but I can try to give you some guidance:

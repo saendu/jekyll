@@ -9,9 +9,9 @@ Yeah you read right. You should not do that. Ant the reason is, because your add
 
 ![NOTSECURE]({{ site.baseurl }}/assets/images/afterworkbeer-not-secure.jpg)
 
-#### In the beginning there was a shortli(o)ved cert
-
 And who wants an unsafe afterwork beer, right? You guessed it: Nobody.
+
+#### In the beginning there was a shortli(o)ved cert
 
 Let’s wrap it up a bit. Let’s Encrypt is probably the savior of the 21 century. Well, maybe that is a bit over-exaggerated but in the end they probably gave us DEVs the most convenient and obviously the cheapest solution to secure our web applications.
 So, having a http:// url without the famous “s”, is just something we don’t want to see anymore. Even all browsers automatically try to redirect your http:// urls to https://. Which make sense in most of the cases, if it is at least a productive app. So, let’s create a cert!

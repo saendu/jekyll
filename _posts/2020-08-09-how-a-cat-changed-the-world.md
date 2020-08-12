@@ -76,7 +76,7 @@ But since we are now in the quantum world, things a bit more complicated. But fi
 So, let me ask you the following question:
 
 > Me: You cannot open the box, what is the state of the cat? 
-You would probably thell me:
+You would probably tell me:
 
 > You: I don't know.
 
