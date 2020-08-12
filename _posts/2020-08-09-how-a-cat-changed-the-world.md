@@ -11,7 +11,7 @@ Are you ready for a bit of mind bending? I have to admit the first time when I p
 
 Ok, enough teaser. Let's start. 
 
-Did you ever hear from **Schrödinger's cat**? It is a famous example to how bizarre quantum physics is. But today we put it up a notch and try to interpret the results.  
+Did you ever hear about **Schrödinger's cat**? It is a famous example to how bizarre quantum physics is. But today we put it up a notch and try to interpret the results.  
 
 ## What is quantum physics
 Well, explaining quantum physics or quantum mechanics in one or two sentences is probably mission impossible. The only thing that you need to know is that quantum physics 'describes' the world/universe on a very small scale. The atomic scale. The building blocks we are all made of and everything around us. 
