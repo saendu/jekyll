@@ -7,7 +7,7 @@ image: assets/images/quantum-bowl.jpg
 tags: [featured]
 ---
 
-Are you ready for a bit of mind bending? I have to admit when I first time put the below puzzle pieces together, I had a bit of a strange feeling in my stomach. So, you decide for yourself if you wanna read on or not. 
+Are you ready for a bit of mind bending? I have to admit the first time when I put the below puzzle pieces together, I had a bit of a strange feeling in my stomach. So, you decide for yourself if you wanna read on or not. 
 
 Ok, enough teaser. Let's start. 
 
