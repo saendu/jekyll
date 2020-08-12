@@ -3,7 +3,7 @@ layout: post
 title:  "The best Amaretto Sour in the world"
 author: sandro
 categories: [ Cocktails ]
-image: assets/images/PepeLM_Amaretto.jpg
+image: assets/images/jm_amaretto_sour.jpg
 tags: [featured]
 ---
 Who says this blog is just about IT stuff? Well, after all the URL goes like my full name, so I should probably also add some private stuff, right? What is a better icebreaker than posting my favorite cocktail. So, if you did not already know; I am kind of a cocktail nerd. So, I usually drink beer in bars - because most bars do not really like making good cocktails. But when I am in a bar that appreciates the making of cocktails, it is not unusual that the bar tender thinks I am hitting on him because I can't stop making compliments about his craft.
