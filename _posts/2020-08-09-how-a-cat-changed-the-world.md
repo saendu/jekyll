@@ -58,16 +58,16 @@ Schrödinger’s cat setup:
 So, you can easily see that: When the atom decays the detector will go off and triggers the hammer that destroys the glass with the poisonous gas. And as an effect the cat dies.
 
 If I would ask you a simple question like:
-> Me: The atom did decay, what is the state of the cat? 
+> **Me**: The atom did decay, what is the state of the cat? 
 
 You would easily tell me:
-> You: It is dead. 
+> **You**: It is dead. 
 
 Or
-> Me: The atom did not decay, what is the state of the cat? 
+> **Me**: The atom did not decay, what is the state of the cat? 
 
 You would easily say:
-> You: It is alive. 
+> **You**: It is alive. 
 
 Without ever opening the box. 
 
@@ -75,11 +75,11 @@ But since we are now in the quantum world, things get a bit more complicated. Bu
 
 So, let me ask you the following:
 
-> Me: You cannot open the box, what is the state of the cat? 
+> **Me**: You cannot open the box, what is the state of the cat? 
 
 You would probably tell me:
 
-> You: I don't know.
+> **You**: I don't know.
 
 I would then ask you. Ok, but what do you guess? What is possible? You would tell me, either the cat is alive **OR** dead. You know from your world that the cat must have either of those states. But the right answer in a quantum world would be: It is alive **AND** dead. 
 
