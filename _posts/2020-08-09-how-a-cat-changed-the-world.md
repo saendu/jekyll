@@ -18,7 +18,7 @@ Well, explaining quantum physics or quantum mechanics in one or two sentences is
 
 So why do we need another theory since we already have Einstein's general relativity? Well, Einstein's GR is kinda the opposite. It works very well in the large scale. How planets, starts, universes or even super clusters behave. But it has its limitations. It is kinda Newton's theory with much more precision. However, when we are going to smaller and smaller scales GR breaks down. Best example in the center of a black hole. 
 
-Both theories (quantum mechanics and general relativity) are correct (in the sense of they were never falsified) and many examples showed that they work in nature. So why not combining those two you ask? Well yes, that is the ultimate goal and it is called 'quantum gravity'. One approach towards quantum gravity is 'string theory' which is a theoretical framework where we replace point-like particles with one-dimensional objects 'strings'. But this is not todays topic.
+Both theories (quantum mechanics and general relativity) are correct (in the sense of they were never falsified) and many examples showed that they work in nature. So why not combining those two you ask? Well yes, that is the ultimate goal and it is called 'quantum gravity'. One approach towards quantum gravity is 'string theory' which is a theoretical framework where we replace point-like particles with one-dimensional objects, 'strings'. But this is not todays topic.
 
 If you struggled with understanding or imagine Einstein's general relativity where time is not a constant, and we can bend space-time, then good luck imagine what is going on in quantum mechanics. But we are here for a ride, so let's do this! 
 
@@ -33,9 +33,9 @@ Momentum is the product of velocity (speed and direction) and mass (how heavy).
 So, a truck with 100 km/h has much more momentum than a motorbike with 100 km/h because of its mass. We can also think of it like 'how hard is it to stop'. 
 
 So, if you now think why is that a problem. Let me give you an example. When we measure the toss of a basketball thrown by a player, we can easily measure the position and momentum of the ball and therefore calculate if the ball will hit the basket.
-If we wanna do the same with an electron (instead of a ball) we get very strange results. It is basically not possible. But why you ask. What is so different form a ball to an electron? Both are round, one is just a bit smaller. Well that is the problem, old-school or school physics learnt us to imagine the electron like a point-like particle. Quantum physicists however describe an electron not like a point-like particle but a cloud. So, when I know ask you, can you tell me where exactly a cloud is, you begin to understand the problem. 
+If we wanna do the same with an electron (instead of a ball) we get very strange results. It is basically not possible. But why you ask. What is so different form a basketball to an electron? Both are round, one is just a bit smaller. Well that is the problem, old-school or school physics learnt us to imagine the electron like a point-like particle. Quantum physicists however describe an electron not like a point-like particle but more like a cloud. So, when I now ask you: can you tell me where exactly a cloud is? You begin to understand the problem. 
 
-But it gets even weirder. Quantum physicists describe the electron as a 'cloud of probability'. So, the cloud kind of shows you where the electron CAN be when you measure it. Because if you do, you get a clear result (not a cloud). So, is it just an uncertainty problem? And when we measure, we know exactly where it is and what momentum it has but not in advance? Well not really. According to quantum physicists the electron is at all locations at the same time... 
+But it gets even weirder. Quantum physicists describe the electron as a 'cloud of probability'. So, the cloud kinda shows you where the electron CAN be when you measure it. Because if you do, you get a clear result (not a cloud). So, is it just an uncertainty problem? And when we measure, we know exactly where it is and what momentum it has but not in advance? Well not really. According to quantum physicists the electron is at all locations at the same time. But only if we are not measuring / looking...
 
 <div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/KGSxFwJJHQPsKzzFba" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
@@ -46,7 +46,7 @@ Schrödinger's cat is an example of Erwin Schrödinger where he tried to show ho
 
 So, what Schrödinger did, is he came up with an example that shows how his equation works if we would apply it to a macroscopic scenario (one we can relate to). So, he came up with the idea of Schrödinger's cat, and it goes like this:
 
-> Before we start it is important to understand, that the decay of a radioactive atom is a quantum effect and can therefore not be predicted. Meaning if you just have ONE atom you don't know WHEN it will decay. If you have two atoms you can take your chemistry textbook and find the half-life period of the atoms and know exactly when ONE of the two atoms decayed. But again, you don't know which one in advance. 
+> Before we start it is important to understand, that the decay of a radioactive atom is a quantum effect and can therefore not be predicted. Meaning if you just have ONE atom you don't know WHEN it will decay. If you have two atoms you can take your chemistry textbook and find the half-life period of the atom and know exactly when ONE of the two atoms decayed. But again, you don't know which one in advance. 
 
 Schrödinger’s cat setup: 
 1. Take a box
@@ -69,13 +69,14 @@ Or
 You would easily say:
 > You: It is alive. 
 
-Without ever opening the box and look. 
+Without ever opening the box. 
 
-But since we are now in the quantum world, things a bit more complicated. But first start with the easy part. If we open the box in the quantum world, everything behaves as we would expect. We can see the atom, detector, hammer, poison and cat and check how the cat is doing. In the quantum world however, it gets weird when we did not yet open the box and ask some questions. 
+But since we are now in the quantum world, things get a bit more complicated. But let us first start with an easy part. If we open the box in the quantum world, everything behaves as we would expect. We can see the atom, detector, hammer, poison and cat and check how the cat is doing. It only gets weird when we do not open the box but ask some questions. 
 
-So, let me ask you the following question:
+So, let me ask you the following:
 
 > Me: You cannot open the box, what is the state of the cat? 
+
 You would probably tell me:
 
 > You: I don't know.
@@ -87,15 +88,14 @@ I would then ask you. Ok, but what do you guess? What is possible? You would tel
 Ok, wait a second. How can a cat be alive and dead at the same time? This was exactly the point of Schrödinger. It is not possible (in our world). However, in the quantum world it is as normal as the sun rising. Schrödinger hated the fact that his perfectly working equation does make such ridiculous statements in our everyday world, that he once said: 
 
 ![Schrödinger statement](https://www.azquotes.com/picture-quotes/quote-i-don-t-like-it-and-i-m-sorry-i-ever-had-anything-to-do-with-it-erwin-schrodinger-26-21-78.jpg)
-
 If your mind is not bent enough, let us try to go into another realm and interpreted what this could mean.
 
-## What does Schrödinger's cat example tell us about our real world?
+## What does Schrödinger's cat example tell us about 'reality'?
 There are actually two popular parties in the quantum mechanics field. 
-- the **'Copenhagen interpretation'** (Bohr/Heisenberg), that basically says do not try to understand what the math means and
+- the **'Copenhagen interpretation'** (Bohr/Heisenberg), that basically says do not try to understand what the math means in reality and
 - the **'Many-world interpretation'** (Everett) that says that everything that can happen, happens but just in another world. 
 
-The Copenhagen interpretation is not complete because we cannot really explain what happens when the wave function collapses (when we open the box). And therefore, we cannot use it as an 'explanation' of Schrödinger's cat. It is also better known as: 'Shut up and calculate'. Which basically means: Stop trying to interpret the results.
+The Copenhagen interpretation is not complete because we cannot really explain what happens when we open the box (when the wave function collapses). And therefore, we cannot use it as an 'explanation' of Schrödinger's cat. It is also better known as: 'Shut up and calculate'. Which basically means: Stop trying to interpret the results.
 
 I want to change your world today, so let me give you the best possible version of a valid explanation what could happen when we open the box:
 
@@ -104,7 +104,7 @@ I want to change your world today, so let me give you the best possible version 
 > **DISCLAIMER** I will not be able to explain this with simple words, because I would probably need another wall-of-text like this. If you are interested in the details, ask me next time we are having a beer together.  
 
 In the above example you clearly saw that the atom, the detector, the hammer and the poison where somehow connected with each other. Meaning that when the atom decayed the detector triggered the hammer and the poison leaked. What happens next is, that the cat would die from the leaked poison. So therefore, the cat is connected too. 
-In quantum mechanics we call this 'entanglement'. Meaning that the atom, detector, hammer and cat are entangled with each other. Precisely, the quantum systems (because all of them are quantum systems on their own) are entangled with each other. 
+In quantum mechanics we call this 'entanglement'. Meaning that the atom, detector, hammer and cat are entangled with each other. Precisely, the quantum systems (because all of them are quantum systems on their own) are entangled with each other and therefore from one quantum system (of the whole box). 
 
 This would be the end of the story and a pretty happy world. However, we have the problem that in reality these quantum systems are not isolated. Not isolated from the environment. The box stands somewhere. In a room, full of other quantum systems, and the room is in a house and the house is in a world, ... (you get the point). We might be able to know the quantum system of the atom, detector, hammer, poison and cat, but for sure we can never know all data of the environment. Basically, we would need to know everything about the universe to make the math work.
 Since we cannot do that the math gives us another solution: The quantum system of the atom, detector, hammer, poison and cat decohere with the environment. And this branches (clones) our universe into two. And we will also be cloned into two. So will the cat. And in one universe the cat is dead and in the other the cat is alive. And when we open the box, we are just in one of those worlds. But the other world is existing too.  
