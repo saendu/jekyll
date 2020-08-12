@@ -6,7 +6,7 @@ categories: [ Article ]
 permalink: /projects.html
 image: assets/images/project-desk.jpg
 ---
-When Corona hit the fan and we all stuck in a lockdown, I've searched for some new hobbies. The result was a couple of IT projects that I've finally started. Below you get a brief overview about some of the noticeable projects. If you also want to get your hands dirty, check if there is an article linked below. Furthermore, you should also find links to Github if you are interested in the code and if available to the apps itself. Most of them are still in progress, so don't go to hard on me. ;-)
+When Corona hit the fan and we all stuck in a lockdown, I've searched for some new hobbies. The result was a couple of IT projects that I've finally started. Below you get a brief overview about some of the noticeable projects. If you also want to get your hands dirty, check if there is an article linked below. Furthermore, you should also find links to Github if you are interested in the code and if available to the apps itself. Most of them are still in progress, so don't go to hard on me.
 
 Currently there are four main projects running on my private cloud:
 - [Raspberry Pie Cluster](#raspberry-pie-cluster)
@@ -43,7 +43,7 @@ Some of the features include:
 **Tech**: NodeJS, Express
 **Github**: [HomeControl](https://github.com/saendu/homecontrol)
 
-I always wanted to control my room via Siri but Apple solution does not work in Switerland and most other products do not support Siri. The Home Control project allows me to control my IKEA smart plugs with Siri. It consists of a simple Express backend with an API that controls an IKEA gateway.
+I always wanted to control my room via Siri but Apple solution does not work in Switzerland and most other products do not support Siri. The Home Control project allows me to control my IKEA smart plugs with Siri. It consists of a simple Express backend with an API that controls an IKEA gateway.
 
 If you wanna know more, read my article [Hey Siri, I wanna sleep!]({{ site.baseurl }}/home-automation) that describes the project in detail.
 
@@ -55,10 +55,10 @@ If you wanna know more, read my article [Hey Siri, I wanna sleep!]({{ site.baseu
 
 The main idea why I created a private website, was to have a location to publish articles about my projects. Almost everybody I was bubbling to what I did during COVID was interested to build something on her own. So, I figured why not do something for the community and contribute back and share all my knowledge. Afterall I also came only that far because other people did the same before me. So here you go. 
 
-If you find any typos, mistake or any other blunder let me know in the comments section or create an issue on Github. I will be very greatful! 
+If you find any typos, mistake or any other blunder let me know in the comments section or create an issue on Github. I will be very grateful! 
 
 ## Mail Gateway
 **Tech**: Raspberry Pie 4, Kubernetes, Ubuntu
 
-Comming soon. 
+Coming soon. 
 
