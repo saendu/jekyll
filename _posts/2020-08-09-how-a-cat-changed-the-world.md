@@ -113,6 +113,6 @@ Since we cannot do that the math gives us another solution: The quantum system o
 
 So, how is that not insane? Well, following the math this theory makes total sense. Just because our brains do not want to accept the fact that decoherence (branching of the universe) happens at a very frequent and high rate and there are a large numbers of us existing in different 'worlds', does not mean it is insane.
 
-Well I warned you. 
+Well, I've warned you. 
 
 Until next time . . .
