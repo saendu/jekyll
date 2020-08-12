@@ -7,7 +7,7 @@ image: assets/images/quantum-bowl.jpg
 tags: [featured]
 ---
 
-Are you ready for a bit of mind bending? I have to admit the first time when I put the below puzzle pieces together, I had a bit of a strange feeling in my stomach. So, you decide for yourself if you wanna read on or not. 
+Are you ready for a bit of mind bending? I have to admit the first time when I put together the puzzle pieces below, I had a bit of a strange feeling in my stomach. So, you decide for yourself if you wanna read on or not. 
 
 Ok, enough teaser. Let's start. 
 
@@ -16,7 +16,7 @@ Did you ever hear about **Schrödinger's cat**? It is a famous example how bizar
 ## What is quantum physics
 Well, explaining quantum physics or quantum mechanics in one or two sentences is probably mission impossible. The only thing that you need to know is that quantum physics 'describes' the world/universe on a very small scale. The atomic scale. The building blocks we are all made of and everything around us. 
 
-So why do we need another theory since we already have Einstein's general relativity? Well, Einstein's GR is kinda the opposite. It works very well in the large scale. How planets, starts, universes or even super clusters behave. But it has its limitations. It is kinda Newton's theory with much more precision. However, when we are going to smaller and smaller scales GR breaks down. Best example in the center of a black hole. 
+So why do we need another theory since we already have Einstein's general relativity? Well, Einstein's GR is kinda the opposite. It works very well in the large scale. How planets, stars, universes or even super clusters behave. But it has its limitations. It is kinda Newton's theory with much more precision. However, when we are going to smaller and smaller scales GR breaks down. Best example in the center of a black hole. 
 
 Both theories (quantum mechanics and general relativity) are correct (in the sense of they were never falsified) and many examples showed that they work in nature. So why not combining those two you ask? Well yes, that is the ultimate goal and it is called 'quantum gravity'. One approach towards quantum gravity is 'string theory' which is a theoretical framework where we replace point-like particles with one-dimensional objects, 'strings'. But this is not todays topic.
 
@@ -35,11 +35,11 @@ So, a truck with 100 km/h has much more momentum than a motorbike with 100 km/h 
 So, if you now think why is that a problem. Let me give you an example. When we measure the toss of a basketball thrown by a player, we can easily measure the position and momentum of the ball and therefore calculate if the ball will hit the basket.
 If we wanna do the same with an electron (instead of a ball) we get very strange results. It is basically not possible. But why you ask. What is so different form a basketball to an electron? Both are round, one is just a bit smaller. Well that is the problem, old-school or school physics learnt us to imagine the electron like a point-like particle. Quantum physicists however describe an electron not like a point-like particle but more like a cloud. So, when I now ask you: can you tell me where exactly a cloud is? You begin to understand the problem. 
 
-But it gets even weirder. Quantum physicists describe the electron as a 'cloud of probability'. So, the cloud kinda shows you where the electron CAN be when you measure it. Because if you do, you get a clear result (not a cloud). So, is it just an uncertainty problem? And when we measure, we know exactly where it is and what momentum it has but not in advance? Well not really. According to quantum physicists the electron is at all locations at the same time. But only if we are not measuring / looking...
+But it gets even weirder. Quantum physicists describe the electron as a 'cloud of probability'. So, the cloud kinda shows you where the electron CAN be when you measure it. Because if you do, you get a clear result (not a cloud). So, is it just an uncertainty problem? And when we measure, we know exactly where it is and what momentum it has but not in advance? Well not really. According to quantum physicists the electron is in a 'superposition' and therefore in all locations at the same time. But only if we are not measuring / looking...
 
 <div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/KGSxFwJJHQPsKzzFba" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
-Yes, I told you, it gets weirder. And I just get started...
+Yes, I told you, it gets weirder. And I just got started...
 
 ## So what is Schrödinger's cat?
 Schrödinger's cat is an example of Erwin Schrödinger where he tried to show how ridiculous the math of quantum mechanics is. He did not like his own equation (Schrödinger equation) which is the main ingredient to cook a quantum meal. In other words, it tells you how the electron cloud (the wave function) will evolve in the future. Ok, sounds very abstract, but just imagine it as the solver algorithm for a Rubik's cube. If you execute it, your Rubik's cube will be solved but you don't really have to know why. 
