@@ -26,7 +26,7 @@ Until this very moment I still do not know how I should have ordered this cockta
 
 He came back with two perfect cocktails and a big grin on his face, telling us in the most charming way: he suspects us being cocktail lovers and he might has one or two other creations for us, if we are interested. 
 
-Later that night, we found out that the tiny bar was operated by Michael Olsson, a known figure in the Danish cocktail scene. Of course, he was no fool and immediately figured out that we are just some random blokes that like to be called 'cocktail lovers' but the bill payed off for him. We left the bar pretty 'happy' and with an empty wallet.
+Later that night, we found out that the tiny bar was operated by Michael Olsson, a known figure in the Danish cocktail scene. Of course, he was no fool and immediately figured out that we are just some random blokes that like to be called 'cocktail lovers' but the night payed off for him. We left the bar pretty 'happy' and with an empty wallet.
 
 So, what is so special about that cocktail? Nothing really and I think the founder of the cocktail 'Jeffrey Morgenthaler' also did not really understand all the fuzz about it. However, he was self confident enough to claim: [I Make the Best Amaretto Sour in The World
 ](https://jeffreymorgenthaler.com/i-make-the-best-amaretto-sour-in-the-world/)
