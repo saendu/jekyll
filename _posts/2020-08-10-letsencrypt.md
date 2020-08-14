@@ -5,7 +5,7 @@ author: sandro
 categories: [ DEV ]
 image: assets/images/lets-encrypt.png
 ---
-Yeah you read right. You should not do that. Ant the reason is, because your address bar will look sooner or later like that:
+Yeah you heared right. You should not do that. Ant the reason is, because your address bar will sooner or later look like that:
 
 ![NOTSECURE]({{ site.baseurl }}/assets/images/afterworkbeer-not-secure.jpg)
 
