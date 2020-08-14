@@ -33,7 +33,9 @@ sudo certbot certonly --manual -d mysite.yourdomain.ch --agree-tos --no-bootstra
 ```
 
 We have to put some info in the prompts and then we get our wanted cert files in the location: `/etc/letsencrypt/live/mysite.yourdomain.ch/`. So, we take those files and probably use it in one of our apps. In my case I have a kubernetes cluster so I would do something like that:
+```
 kubectl create secret tls mysite-yourdomain-ch-tls --cert=fullchain1.pem --key=privkey1.pem
+```
 And now we gonna use that secret in one of our ingress, like so:
 ```
  apiVersion: networking.k8s.io/v1beta1
@@ -54,7 +56,7 @@ And now we gonna use that secret in one of our ingress, like so:
           serviceName: mysite
           servicePort: 80
 ```
-And then what next? Nothing next. We have no a secure endpoint on https://mysite.yourdomain.ch. So, our job is done and we can continue doing more interesting stuff.
+And then what next? Nothing next. We have now a secure endpoint on https://mysite.yourdomain.ch. So, our job is done and we can continue doing more interesting stuff.
 
 And then, time passes…
 
