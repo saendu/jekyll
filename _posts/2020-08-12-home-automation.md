@@ -7,9 +7,10 @@ image: assets/images/tradfri-gateway.jpg
 tags: [featured]
 ---
 
+Have you ever lain in your bed, already snuggled up and then you forgot you turn off a lamp, laptop or any other annoying device you cannot control from your bed? Well, we live in the 21st century, so we should be able to have a solution for that problem, don't we? 
+
 > ** UPDATE 14.10.20 ** With a recent iOS update it is now possible to connect your Trådfri Gateway with Apple Home kit. So depending on your laziness  vs. curious ration there is no need to do all the hacking below.
 
-Have you ever lain in your bed, already snuggled up and then you forgot you turn off a lamp, laptop or any other annoying device you cannot control from your bed? Well, we live in the 21st century, so we should be able to have a solution for that problem, don't we? 
 
 Yeah, I thought that too and then I realized you have to buy one of those very pricy home automation systems from Apple. And then you realize - Oh we live in Switzerland with 'one-of-a-kind-power-plugs' that only exist in Switzerland. And guess what, a pretty small country and therefore a pretty small market. Well, luckily there are other brands that actually produce Swiss-smart-plug hardware but then they probably have a crappy app to control the whole thing. And your dream to say...
 > Hey Siri, I wanna sleep! 
